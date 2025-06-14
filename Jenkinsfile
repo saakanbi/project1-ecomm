@@ -23,11 +23,11 @@ pipeline {
                     
                     // Build the Docker image
                     sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} ."
-                    sh "docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest"
+                    sh "docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:v1"
                     
                     // Push the Docker image
                     sh "docker push ${DOCKER_IMAGE}:${DOCKER_TAG}"
-                    sh "docker push ${DOCKER_IMAGE}:latest"
+                    sh "docker push ${DOCKER_IMAGE}:v1"
                 }
             }
         }
