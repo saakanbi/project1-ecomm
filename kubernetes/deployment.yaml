@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: ecommerce-backend
-        image: samsow/ecommerce-backend:latest
+        image: wole9548/ecomm:v1
         ports:
         - containerPort: 8080
         resources:
