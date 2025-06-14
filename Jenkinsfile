@@ -4,14 +4,14 @@ pipeline {
    
     environment {
         DOCKER_HUB_CREDENTIALS = credentials('docker-hub-credentials')
-        DOCKER_IMAGE = 'samsow/ecommerce-backend'
+        DOCKER_IMAGE = 'wole9548/ecomm'
         DOCKER_TAG = "${env.BUILD_NUMBER}"
     }
     
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'development', url: 'https://github.com/SASowah/devops-end-to-end-labs.git'
+                git branch: 'development', url: 'https://github.com/saakanbi/project1-ecomm.git'
             }
         }
         
