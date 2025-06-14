@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'development', url: 'https://github.com/saakanbi/project1-ecomm.git'
+                git branch: 'dev', url: 'https://github.com/saakanbi/project1-ecomm.git'
             }
         }
         
